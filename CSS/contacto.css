@@ -1,0 +1,617 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+:root {
+  --fondo: #f5f6fa;
+  --titulo: #c8d6e5;
+  --subtitulos: #ecf0f1;
+  --bordes: #192a56;
+  --fuente: sans-serif;
+  --footer: #2f3640;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: var(--fuente);
+}
+
+/* ------------------------ HEADER--------------------------- */
+
+header {
+  width: 100%;
+  height: 51%;
+  background: #141e30; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(hsla(212, 35%, 21%, 0.719)),
+      to(#141e30)
+    ),
+    url(../IMG/banner.png);
+  background: -o-linear-gradient(left, hsla(212, 35%, 21%, 0.719), #141e30),
+    url(../IMG/banner.png);
+  background: linear-gradient(to right, hsla(212, 35%, 21%, 0.719), #141e30),
+    url(../IMG/banner.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  max-height: 500px;
+  min-height: 300px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  position: relative;
+}
+
+.contenedor {
+  width: 100%;
+  /* height: 100%; */
+}
+
+/* ------------------------Navegacion------------------------ */
+
+.navegacion {
+  width: 100%;
+  height: 50px;
+  max-height: 50px;
+  position: relative;
+  -webkit-animation-name: salida;
+  animation-name: salida;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+}
+
+.lista {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  right: -300px;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  transform: translateX(0px);
+  transition: transform 0.2s ease;
+}
+
+.lista.active {
+  transform: translateX(-300px);
+}
+
+.lista a {
+  margin-right: 30px;
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--titulo);
+  position: relative;
+}
+
+.lista a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 0%;
+  background: var(--titulo);
+  display: block;
+  -webkit-transition: width 0.2s ease-in;
+  -o-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+}
+
+.lista a:hover::after {
+  width: 100%;
+}
+
+/* ---------------------------------TEXTOS--------------------------------- */
+
+.textos {
+  width: 100%;
+  height: 60%;
+  /* background: var(--fondo); */
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  -webkit-animation-name: salida;
+
+  animation-name: salida;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+}
+
+.titulo {
+  font-size: 30px;
+  color: var(--titulo);
+  font-family: Maiandra GD;
+}
+
+.subtitulo {
+  font-size: 25px;
+  color: var(--subtitulos);
+}
+
+/* --------------------------------------WAVE-------------------------------------- */
+.wave {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+/* -------------------------------------- Formulario -------------------------------------- */
+.titulo-form {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  width: 90%;
+
+  -webkit-animation-name: salida;
+  animation-name: salida;
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+}
+
+main {
+  max-width: 800px;
+  padding: 40px;
+  margin: auto;
+  width: 90%;
+
+  -webkit-animation-name: salida;
+  animation-name: salida;
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+}
+
+.label-formulario {
+  font-weight: 700;
+  display: block;
+  padding: 10px;
+}
+
+.input-formulario {
+  width: 100%;
+  background: rgb(216, 216, 216);
+  border: 3px solid transparent;
+  border-radius: 3px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 40px 0 10px;
+  transition: 0.5s ease all;
+  outline: none;
+}
+
+.textarea {
+  background: rgb(216, 216, 216);
+  width: 100%;
+  border: 3px solid transparent;
+  height: 15%;
+  border-radius: 3px;
+  padding: 0 40px 0 10px;
+  transition: 0.5s ease all;
+  resize: none;
+  outline: none;
+}
+
+.input-formulario:focus,
+.textarea:focus {
+  border: 3px solid var(--bordes);
+  box-shadow: 3px 0 30px rgba(163, 163, 163, 0.4);
+}
+
+input[type="email"] {
+  margin-bottom: 10px;
+  user-select: none;
+}
+
+.input-error {
+  font-size: 12px;
+  margin-bottom: 0;
+  display: block;
+  padding-bottom: 10px;
+  display: none;
+}
+
+.parrafoEspera {
+  font-size: 12px;
+  margin-bottom: 0;
+  display: block;
+  padding-bottom: 10px;
+}
+
+.grupo-espera {
+  display: none;
+}
+.input-textarea-error {
+  font-size: 12px;
+  margin-bottom: 0;
+  display: block;
+  padding-bottom: 10px;
+  display: none;
+}
+
+.formulario-mensaje {
+  height: 45px;
+  line-height: 45px;
+  background: #f66060;
+  padding: 0 15px;
+  border-radius: 3px;
+  margin-top: 20px;
+  display: none;
+}
+.formulario-mensaje p {
+  margin: 0;
+}
+
+.formulario-btn-enviar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.formulario-btn {
+  height: 45px;
+  line-height: 45px;
+  width: 30%;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.5s ease all;
+}
+
+.formulario-btn:hover {
+  box-shadow: 3px 0 30px rgba(163, 163, 163, 1);
+}
+
+.grupo-asunto-input {
+  cursor: pointer;
+}
+
+.grupo-asunto-input:focus {
+  border: none;
+}
+
+.formulario-mensaje-exito {
+  padding-top: 20px;
+  font-size: 14px;
+  color: #119200;
+  display: none;
+}
+
+.lista-desplegable {
+  margin-top: 10px;
+  list-style: none;
+  display: block;
+  display: none;
+}
+
+.li-desplegable {
+  background: rgb(216, 216, 216);
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 1s ease all;
+}
+
+.drop-down {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 20px;
+}
+
+.drop-up {
+  cursor: pointer;
+  position: absolute;
+  right: 19px;
+  top: 10px;
+  font-size: 20px;
+  opacity: 0;
+}
+/* Clases de validacion JS */
+.input-error-activo {
+  display: block;
+  color: #ff0000;
+}
+
+.input-textarea-error-activo {
+  display: block;
+  color: #ff0000;
+}
+
+.formulario-mensaje-activo {
+  display: block;
+}
+
+.formulario-mensaje-exito-activo {
+  display: block;
+}
+
+.formulario-grupo-incorrecto .label-formulario {
+  color: #bb2929;
+}
+
+.formulario-textarea-label-incorrecto .label-formulario {
+  color: #bb2929;
+}
+
+.formulario-textarea-incorrecto .textarea {
+  border: 3px solid #bb2929;
+}
+
+.formulario-grupo-incorrecto .input-formulario {
+  border: 3px solid #bb2929;
+}
+
+.formulario-grupo-correcto .label-formulario {
+  color: #119200;
+}
+.formulario-grupo-correcto .input-formulario {
+  border: 3px solid #119200;
+}
+
+.formulario-textarea-label-correcto .label-formulario {
+  color: #119200;
+}
+
+.formulario-textarea-correcto .textarea {
+  border: 3px solid #119200;
+}
+
+.lista-desplegable-activo {
+  display: block;
+}
+
+.drop-up-no-visto {
+  opacity: 0;
+}
+
+.drop-down-no-visto {
+  opacity: 0;
+}
+
+.drop-down-activo {
+  opacity: 1;
+}
+
+.drop-up-activo {
+  opacity: 1;
+}
+
+.grupoEspera-activo {
+  display: block;
+}
+/* -----------------------MENU MOVIL----------------------- */
+
+.menu-movil {
+  width: 25px;
+  height: 30px;
+  /* background: #000; */
+  position: absolute;
+  top: 18px;
+  right: 0;
+
+  cursor: pointer;
+  display: none;
+}
+
+.cel-inactive {
+  display: none;
+  color: var(--titulo);
+}
+/* --------------------------KEYFRAME-------------------------- */
+
+@-webkit-keyframes salida {
+  from {
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes salida {
+  from {
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+/* Media quieries */
+
+@media (max-width: 1300px) {
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 768px) {
+  .menu-movil {
+    margin-right: 20px;
+  }
+
+  .menu-movil,
+  .linea-1,
+  .linea-2,
+  .linea-3 {
+    display: block;
+  }
+
+  .linea-1,
+  .linea-2,
+  .linea-3 {
+    height: 2px;
+    background: #fff;
+  }
+
+  .linea-1,
+  .linea-2 {
+    margin-bottom: 5px;
+  }
+
+  .lista {
+    background: var(--bordes);
+    width: 30%;
+    min-height: 400px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    border-radius: 0 10px 10px 0;
+    opacity: 0.99;
+
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .lista a {
+    font-size: 14px;
+    padding: 20px;
+  }
+
+  .lista a::after {
+    display: none;
+  }
+  .titulo {
+    font-size: 20px;
+  }
+
+  .subtitulo {
+    font-size: 20px;
+  }
+  .formulario-btn {
+    width: 108%;
+  }
+}
+
+@media (max-width: 575px) {
+  .titulo {
+    font-size: 18px;
+  }
+
+  .subtitulo {
+    font-size: 10px;
+  }
+
+  .lista {
+    width: 35%;
+  }
+}
+
+@media (max-width: 500px) {
+  .lista {
+    width: 55%;
+  }
+
+  .textos {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .titulo {
+    font-size: 13px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 360px) {
+  .lista {
+    width: 55%;
+  }
+}
+
+@media (max-width: 325px) {
+  .navegacion {
+    display: none;
+  }
+
+  .menu-movil {
+    display: none;
+  }
+
+  html {
+    height: 200px;
+  }
+
+  .subtitulo {
+    display: none;
+  }
+
+  .titulo {
+    display: none;
+  }
+
+  .cel-inactive {
+    display: block;
+  }
+
+  .formulario {
+    display: none;
+  }
+
+  .titulo-form {
+    display: none;
+  }
+}

@@ -1,0 +1,940 @@
+/*
+  * Prefixed by https://autoprefixer.github.io
+  * PostCSS: v7.0.29,
+  * Autoprefixer: v9.7.6
+  * Browsers: last 4 version
+  */
+
+:root {
+  --fondo: #f5f6fa;
+  --titulo: #c8d6e5;
+  --subtitulos: #ecf0f1;
+  --bordes: #192a56;
+  --fuente: sans-serif;
+  --footer: #2f3640;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: var(--fuente);
+}
+
+/* ------------------------ HEADER--------------------------- */
+
+header {
+  width: 100%;
+  height: 51%;
+  background: #141e30; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(hsla(212, 35%, 21%, 0.719)),
+      to(#141e30)
+    ),
+    url(../IMG/banner.png);
+  background: -o-linear-gradient(left, hsla(212, 35%, 21%, 0.719), #141e30),
+    url(../IMG/banner.png);
+  background: linear-gradient(to right, hsla(212, 35%, 21%, 0.719), #141e30),
+    url(../IMG/banner.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  max-height: 500px;
+  min-height: 300px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* ------------------------Navegacion------------------------ */
+
+.navegacion {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  -webkit-animation-name: salida;
+  animation-name: salida;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  max-height: 50px;
+}
+
+.lista {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 100;
+  right: -300px;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  transition: transform 0.2s ease;
+}
+
+.lista.active {
+  transform: translateX(-300px);
+}
+
+.lista a {
+  margin-right: 30px;
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--titulo);
+  position: relative;
+}
+
+.lista a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 0%;
+  background: var(--titulo);
+  display: block;
+  -webkit-transition: width 0.2s ease-in;
+  -o-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+}
+
+.lista a:hover::after {
+  width: 100%;
+}
+
+/* ---------------------------------TEXTOS--------------------------------- */
+
+.textos {
+  width: 100%;
+  height: 60%;
+  /* background: var(--fondo); */
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  -webkit-animation-name: salida;
+
+  animation-name: salida;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+}
+
+.titulo {
+  font-size: 30px;
+  color: var(--titulo);
+}
+
+.cel-inactive {
+  display: none;
+  color: var(--titulo);
+}
+
+.subtitulo {
+  font-size: 25px;
+  color: var(--subtitulos);
+}
+
+/* --------------------------------------WAVE-------------------------------------- */
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* ---------------------------------TEXTO PRINCIPAL--------------------------------- */
+
+main {
+  height: auto;
+  width: auto;
+}
+
+/* TITULO PRYECTOS */
+.titulo-proyectos {
+  width: 100%;
+  margin-top: 20px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.titulo-proyectos h2 {
+  color: var(--bordes);
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 30px;
+
+  -webkit-animation-name: salida;
+
+  animation-name: salida;
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+}
+
+/* -----------------------------------TARJETAS 3D----------------------------------- */
+.contenedor {
+  max-width: 1600px;
+  max-height: 1500px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+.contenedor_tarjeta {
+  width: 450px;
+  height: 100%;
+  margin: 100px 100px 0 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  -webkit-animation-name: salida;
+
+  animation-name: salida;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+}
+
+.displaySldier1,
+.displaySldier2 {
+  position: relative;
+  bottom: -300px;
+}
+
+.contenedor_tarjeta:hover figure {
+  -webkit-transform: perspective(600px) rotateY(180deg);
+  transform: perspective(600px) rotateY(180deg);
+  -webkit-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.25);
+}
+
+.orig-active {
+  width: 450px;
+  height: 800px;
+  margin: 5px 5px 0 5px;
+  position: relative;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: perspective(600px) rotateY(0deg);
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.titles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 50px;
+
+  -webkit-animation-name: salida;
+
+  animation-name: salida;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+}
+
+.titulo-edificio-1,
+.titulo-edificio-2 {
+  cursor: pointer;
+  font-size: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--bordes);
+}
+
+.titulo-edificio-1:hover,
+.titulo-edificio-2:hover {
+  text-decoration: underline;
+}
+
+.titulo-edificio-1 {
+  margin-left: 330px;
+}
+
+.titulo-edificio-2 {
+  margin-right: 1px;
+}
+
+.go-origin1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 50%;
+}
+
+figure {
+  width: 450px;
+  height: 800px;
+  margin: 5px 5px 0 5px;
+  position: relative;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: perspective(600px) rotateY(0deg);
+  transform: perspective(600px) rotateY(0deg);
+}
+
+figure .frontal,
+figure .trasera {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+figure .frontal {
+  display: block;
+  /* backface-visibility: hidden; */
+}
+
+figure .trasera {
+  position: absolute;
+  top: 0;
+  padding: 20px;
+  color: var(--subtitulos);
+  -webkit-transform: perspective(600px) rotateY(180deg);
+  transform: perspective(600px) rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: auto;
+
+  background: hsla(0, 0%, 0%, 0.7);
+}
+
+figure .trasera h2 {
+  color: var(--titulo);
+  padding: 20px;
+  font-size: 30px;
+}
+
+figure .trasera span {
+  color: var(--titulo);
+  font-weight: bold;
+  font-size: 22px;
+}
+
+figure .trasera p {
+  font-size: 20px;
+}
+
+figure .trasera hr {
+  height: 2px;
+  background: var(--fondo);
+  border: none;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+/* displayers */
+
+.textDisplayer {
+  text-align: center;
+  color: var(--bordes);
+  margin-bottom: 10px;
+}
+
+.textDisplayer2 {
+  text-align: center;
+  color: var(--bordes);
+  margin-bottom: 10px;
+}
+/* -----------------------SLIDER----------------------- */
+
+.carousel {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 100px;
+
+  -webkit-animation-name: salida;
+
+  animation-name: salida;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+}
+
+/* images */
+
+.sliderList {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 400px;
+  padding: 10px 0px;
+  margin: 0px auto;
+  max-width: 90vw;
+  overflow: hidden;
+}
+.sliderImg {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s ease-in-out;
+}
+.sliderSlide {
+  position: relative;
+  width: 400px;
+  padding: 0 18px;
+  float: left;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+}
+.sliderSlide img {
+  object-fit: cover;
+  height: 400px;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  display: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.overlay-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.overlay img {
+  min-width: 100%;
+  min-height: 100%;
+  /* margin: auto; */
+}
+
+.contenedor-img {
+  position: relative;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay .cerrarOverlay {
+  background: none;
+  font-size: 24px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: -30px;
+}
+
+.cerrarOverlay:focus {
+  outline: none;
+}
+
+/* ----------------------- Slider Arrows ----------------------- */
+
+.btnArrow {
+  border-radius: 30px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 4;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+  border: 0;
+  cursor: pointer;
+}
+.btnArrow:focus {
+  outline: 0;
+}
+.btnArrow i {
+  font-size: 24px;
+  height: 100%;
+  color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  top: 13px;
+}
+.btnPrev {
+  left: 19px;
+}
+.btnNext {
+  right: 0px;
+}
+
+/* SLIDER 2 */
+
+.carousel2 {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 100px;
+
+  -webkit-animation-name: salida;
+
+  animation-name: salida;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+}
+
+/* images */
+
+.sliderList2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 400px;
+  padding: 10px 0px;
+  margin: 0px auto;
+  max-width: 90vw;
+  overflow: hidden;
+}
+.sliderImg2 {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s ease-in-out;
+}
+.sliderSlide2 {
+  position: relative;
+  width: 400px;
+  padding: 0 18px;
+  float: left;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+}
+.sliderSlide2 img {
+  object-fit: cover;
+  height: 400px;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+}
+
+/* ----------------------- Slider Arrows ----------------------- */
+
+.btnArrow {
+  border-radius: 30px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 4;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+  border: 0;
+  cursor: pointer;
+}
+.btnArrow:focus {
+  outline: 0;
+}
+.btnArrow i {
+  font-size: 24px;
+  height: 100%;
+  color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  top: 13px;
+}
+.btnPrev2 {
+  left: 19px;
+}
+.btnNext2 {
+  right: 0px;
+}
+
+/* -----------------------MENU MOVIL----------------------- */
+
+.menu-movil {
+  width: 25px;
+  height: 30px;
+  /* background: #000; */
+  position: absolute;
+  top: 18px;
+  right: 0;
+
+  cursor: pointer;
+  display: none;
+}
+
+/* --------------------------KEYFRAME-------------------------- */
+
+@-webkit-keyframes salida {
+  from {
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes salida {
+  from {
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+/* -------------------------MEDIA QUERIES------------------------- */
+
+@media (max-width: 1120px) {
+  .contenedor_tarjeta {
+    width: 400px;
+    margin: 50px 50px 0 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .contenedor_tarjeta {
+    width: 350px;
+    margin: 30px 30px 0 30px;
+  }
+}
+
+@media (max-width: 820px) {
+  .grid .item {
+    width: calc(50% - 20px);
+  }
+
+  .grid2 .item2 {
+    width: calc(50% - 20px);
+  }
+
+  .contenedor_tarjeta {
+    margin: 15px 15px 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-movil {
+    margin-right: 20px;
+  }
+  .menu-movil,
+  .linea-1,
+  .linea-2,
+  .linea-3 {
+    display: block;
+  }
+
+  .linea-1,
+  .linea-2,
+  .linea-3 {
+    height: 2px;
+    background: #fff;
+  }
+
+  .linea-1,
+  .linea-2 {
+    margin-bottom: 5px;
+  }
+  .lista {
+    border-radius: 0 10px 10px 0;
+    width: 25%;
+    min-height: 400px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: var(--bordes);
+    z-index: 100;
+    opacity: 0.99;
+
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .lista a {
+    font-size: 14px;
+    padding: 20px;
+  }
+
+  .lista a::after {
+    display: none;
+  }
+
+  .titulo {
+    font-size: 20px;
+  }
+
+  .subtitulo {
+    font-size: 20px;
+  }
+  .titulo-proyectos h2 {
+    font-size: 30px;
+  }
+
+  .header .logo h2 {
+    font-size: 24px;
+  }
+
+  .header .logo span {
+    font-size: 18px;
+  }
+  .header .categorias a {
+    font-size: 16px;
+  }
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .contenedor_tarjeta {
+    width: 400px;
+  }
+
+  .orig1 {
+    margin-top: 60px;
+  }
+
+  .header2 .logo2 h2 {
+    font-size: 24px;
+  }
+
+  .header2 .logo2 span {
+    font-size: 18px;
+  }
+
+  .header2 .categorias2 a {
+    font-size: 16px;
+  }
+  .lista {
+    width: 30%;
+  }
+
+  /* .contenedor_tarjeta:hover figure {
+    -webkit-transform: perspective(0px) rotateY(0deg);
+    transform: perspective(0px) rotateY(0deg);
+  } */
+}
+
+@media (max-width: 650px) {
+  .grid .item {
+    width: calc(98% - 20px);
+  }
+  .grid .item img {
+    width: 80%;
+    margin-left: 60px;
+  }
+
+  .grid2 .item2 {
+    width: calc(98% - 20px);
+  }
+  .grid2 .item2 img {
+    width: 80%;
+    margin-left: 60px;
+  }
+
+  .overlay img {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .overlay #btn-cerrar-popup {
+    font-size: 25px;
+    right: 30px;
+  }
+  .orig1 {
+    height: 500px;
+  }
+
+  .orig2 {
+    height: 500px;
+  }
+
+  .orig1 .trasera span {
+    font-size: 12px;
+  }
+  .orig1 .trasera p {
+    font-size: 10px;
+  }
+  .orig1 .trasera h2 {
+    font-size: 14px;
+  }
+
+  .orig2 .trasera span {
+    font-size: 12px;
+  }
+  .orig2 .trasera p {
+    font-size: 10px;
+  }
+  .orig2 .trasera h2 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 575px) {
+  .titulo {
+    font-size: 18px;
+  }
+  .subtitulo {
+    font-size: 13px;
+  }
+  .titulo-proyectos h2 {
+    font-size: 18px;
+  }
+  .lista {
+    width: 40%;
+  }
+}
+
+@media (max-width: 460px) {
+  figure .frontal {
+    height: 105%;
+  }
+
+  figure .trasera {
+    height: 105%;
+  }
+
+  .orig1 {
+    margin-bottom: 80px;
+  }
+
+  .contenedor_tarjeta {
+    width: 300px;
+  }
+  .categorias {
+    width: 100%;
+  }
+  .categorias2 {
+    width: 100%;
+  }
+  .lista {
+    width: 55%;
+  }
+  .titulo {
+    font-size: 13px;
+  }
+  .grid .item img {
+    width: 100%;
+    margin-left: 0;
+  }
+  .grid2 .item2 img {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media (max-width: 325px) {
+  .navegacion,
+  .lista,
+  .menu-movil,
+  .titulo,
+  .subtitulo,
+  .contenedor,
+  .titulo-proyectos,
+  .grid,
+  .grid2,
+  .contenido,
+  .contenido2,
+  .carousel,
+  .carousel2 {
+    display: none;
+  }
+  .cel-inactive {
+    display: block;
+  }
+}

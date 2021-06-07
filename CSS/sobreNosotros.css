@@ -1,0 +1,711 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+:root {
+  --fondo: #f5f6fa;
+  --titulo: #c8d6e5;
+  --subtitulos: #ecf0f1;
+  --bordes: #192a56;
+  --fuente: sans-serif;
+  --footer: #2f3640;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: var(--fuente);
+}
+
+body {
+  height: auto;
+}
+
+/* ------------------------ HEADER--------------------------- */
+
+header {
+  width: 100%;
+  height: 51%;
+  background: #141e30; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(hsla(212, 35%, 21%, 0.719)),
+      to(#141e30)
+    ),
+    url(../IMG/banner.png);
+  background: -o-linear-gradient(left, hsla(212, 35%, 21%, 0.719), #141e30),
+    url(../IMG/banner.png);
+  background: linear-gradient(to right, hsla(212, 35%, 21%, 0.719), #141e30),
+    url(../IMG/banner.png); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  max-height: 500px;
+  min-height: 300px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* ------------------------Navegacion------------------------ */
+
+.navegacion {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  -webkit-animation-name: salida;
+  animation-name: salida;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  max-height: 50px;
+}
+
+.lista {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  right: -300px;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  transition: transform 0.2s ease;
+}
+
+.lista a {
+  margin-right: 30px;
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--titulo);
+  position: relative;
+}
+
+.lista a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 0%;
+  background: var(--titulo);
+  display: block;
+  -webkit-transition: width 0.2s ease-in;
+  -o-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+}
+
+.lista a:hover::after {
+  width: 100%;
+}
+
+.lista.active {
+  transform: translateX(-300px);
+}
+
+/* ---------------------------------TEXTOS--------------------------------- */
+
+.textos {
+  width: 100%;
+  height: 60%;
+  /* background: var(--fondo); */
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  -webkit-animation-name: salida;
+
+  animation-name: salida;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+}
+
+.titulo {
+  font-size: 30px;
+  color: var(--titulo);
+}
+
+.subtitulo {
+  font-size: 25px;
+  color: var(--subtitulos);
+}
+
+/* --------------------------------------WAVE-------------------------------------- */
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* ---------------------------------TEXTO PRINCIPAL--------------------------------- */
+
+.main {
+  height: 33%;
+  width: 100%;
+  margin: auto;
+}
+
+.principal {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.vision {
+  width: 35%;
+  height: 100%;
+  margin-left: 12%;
+}
+
+.titulo-vision {
+  text-align: center;
+  color: var(--bordes);
+  font-weight: bold;
+  font-size: 25px;
+  position: relative;
+
+  -webkit-animation-name: salida;
+
+  animation-name: salida;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+}
+
+.titulo-vision::after {
+  content: "";
+  background: #82589f;
+  height: 5px;
+  width: 100%;
+  display: block;
+  position: absolute;
+
+  -webkit-animation-name: salida;
+
+  animation-name: salida;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+}
+
+.parrafo-vision {
+  width: 100%;
+  height: 81%;
+
+  border-radius: 0 0 20px 20px;
+  text-align: justify;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+
+  -webkit-animation-name: salida;
+
+  animation-name: salida;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+}
+
+.parrafo-vision p {
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 20px;
+}
+
+.mision {
+  width: 35%;
+  height: 100%;
+  margin-left: 1%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+.titulo-mision {
+  text-align: center;
+  color: var(--bordes);
+  font-weight: bold;
+  font-size: 25px;
+  position: relative;
+
+  -webkit-animation-name: salida;
+
+  animation-name: salida;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+}
+
+.titulo-mision::after {
+  content: "";
+  background: #82589f;
+  height: 5px;
+  width: 100%;
+  display: block;
+  position: absolute;
+
+  -webkit-animation-name: salida;
+
+  animation-name: salida;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+}
+
+.parrafo-mision {
+  width: 100%;
+  height: 80%;
+  text-align: justify;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+
+  -webkit-animation-name: salida;
+
+  animation-name: salida;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+}
+
+.parrafo-mision p {
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 20px;
+}
+/* ----------------------- LOGO ----------------------- */
+.logo {
+  width: 95%;
+  height: 100%;
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: center;
+
+  -webkit-animation-name: salida;
+
+  animation-name: salida;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+/* -----------------------MENU MOVIL----------------------- */
+
+.menu-movil {
+  width: 25px;
+  height: 30px;
+  /* background: #000; */
+  position: absolute;
+  top: 18px;
+  right: 0;
+
+  cursor: pointer;
+  display: none;
+}
+
+.cel-inactive {
+  display: none;
+  color: var(--titulo);
+}
+/* --------------------------KEYFRAME-------------------------- */
+
+@-webkit-keyframes salida {
+  from {
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes salida {
+  from {
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .mision {
+    margin-left: 5%;
+  }
+
+  .parrafo-mision {
+    width: 120%;
+  }
+
+  .parrafo-vision {
+    width: 120%;
+  }
+
+  .titulo-mision {
+    width: 120%;
+  }
+
+  .titulo-vision {
+    width: 120%;
+  }
+
+  .vision {
+    margin-left: 3%;
+  }
+}
+
+@media (max-width: 992px) {
+  .parrafo-mision {
+    width: 120%;
+    height: 100%;
+  }
+
+  .parrafo-vision {
+    width: 120%;
+    height: 100%;
+  }
+
+  .titulo-mision {
+    width: 120%;
+  }
+
+  .titulo-vision {
+    width: 120%;
+  }
+
+  .vision {
+    margin-left: 3%;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-movil {
+    margin-right: 20px;
+  }
+
+  .menu-movil,
+  .linea-1,
+  .linea-2,
+  .linea-3 {
+    display: block;
+  }
+
+  .linea-1,
+  .linea-2,
+  .linea-3 {
+    height: 2px;
+    background: #fff;
+  }
+
+  .linea-1,
+  .linea-2 {
+    margin-bottom: 5px;
+  }
+
+  .lista {
+    border-radius: 0 10px 10px 0;
+    width: 30%;
+    min-height: 400px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: var(--bordes);
+    z-index: 100;
+    opacity: 0.99;
+
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .lista a {
+    font-size: 14px;
+    padding: 20px;
+  }
+
+  .lista a::after {
+    display: none;
+  }
+
+  .titulo {
+    font-size: 20px;
+  }
+
+  .subtitulo {
+    font-size: 20px;
+  }
+
+  .principal {
+    position: absolute;
+    height: 560px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .parrafo-vision {
+    height: 25%;
+  }
+
+  .parrafo-mision {
+    height: 75%;
+  }
+
+  .main {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mision {
+    position: absolute;
+    top: 48%;
+    left: 10px;
+    width: 70%;
+    height: 200px;
+  }
+
+  .vision {
+    position: absolute;
+    left: 21px;
+    width: 70%;
+  }
+
+  .logo {
+    margin-top: 600px;
+  }
+
+  .logo img {
+    width: 80%;
+    height: 80%;
+  }
+}
+
+@media (max-width: 592px) {
+  .parrafo-mision {
+    height: 85%;
+  }
+
+  .vision {
+    left: 17px;
+  }
+}
+
+@media (max-width: 575px) {
+  .lista {
+    width: 35%;
+  }
+
+  .mision {
+    top: 50%;
+  }
+
+  .titulo-vision {
+    font-size: 20px;
+  }
+
+  .titulo-mision {
+    font-size: 20px;
+  }
+  .parrafo-mision {
+    height: 80%;
+  }
+
+  .parrafo-vision {
+    height: 30%;
+  }
+
+  .titulo {
+    font-size: 18px;
+  }
+
+  .subtitulo {
+    font-size: 13px;
+  }
+
+  .parrafo-mision > p {
+    font-size: 14px;
+  }
+
+  .parrafo-vision > p {
+    font-size: 14px;
+  }
+
+  .titulo-footer {
+    top: 51px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .subtitulo {
+    font-size: 11px;
+  }
+
+  .lista {
+    width: 50%;
+  }
+
+  .parrafo-vision {
+    height: 33%;
+  }
+
+  .parrafo-mision {
+    height: 80%;
+  }
+  .logo {
+    margin-top: 700px;
+  }
+}
+
+@media (max-width: 460px) {
+  .parrafo-mision {
+    height: 90%;
+  }
+
+  .titulo {
+    font-size: 13px;
+  }
+
+  .subtitulo {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 430px) {
+  .parrafo-vision {
+    height: 40%;
+  }
+
+  .parrafo-mision {
+    height: 100%;
+  }
+
+  .titulo {
+    font-size: 12px;
+  }
+
+  .subtitulo {
+    font-size: 9.5px;
+  }
+}
+
+@media (max-width: 390px) {
+  .parrafo-vision {
+    height: 40%;
+  }
+
+  .parrafo-mision {
+    height: 110%;
+  }
+  .lista {
+    width: 55%;
+  }
+}
+
+@media (max-width: 360px) {
+  .parrafo-mision {
+    height: 120%;
+  }
+  .parrafo-vision {
+    height: 45%;
+  }
+}
+@media (max-width: 345px) {
+  .parrafo-mision {
+    height: 120%;
+  }
+  .parrafo-vision {
+    height: 45%;
+  }
+}
+
+@media (max-width: 325px) {
+  .navegacion,
+  .lista,
+  .menu-movil,
+  .titulo,
+  .subtitulo,
+  .mision,
+  .vision,
+  .footer-sec,
+  .titulo-footer,
+  .logo {
+    display: none;
+  }
+
+  .cel-inactive {
+    display: block;
+  }
+}

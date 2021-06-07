@@ -1,0 +1,183 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/contacto.css" />
+    <link
+      rel="shortcut icon"
+      href="../IMG/logoOrigin.ico.jpg"
+      type="image/x-icon"
+    />
+        <meta
+      name="descripcion"
+      content="Origin Holdings SAS es una empresa de construccion de edificios "
+    />
+    <meta
+      name="keywords"
+      content="Origin, origin, Holdings, holdings, SAS, Origin Holdings SAS en Bogota, Bogota"
+    />
+    <title>Origin Holdings SAS</title>
+  </head>
+  <body>
+    <header>
+      <div class="wave">
+        <div class="wave" style="height: 100px; overflow: hidden">
+          <svg
+            viewBox="0 0 500 150"
+            preserveAspectRatio="none"
+            style="height: 100%; width: 100%"
+          >
+            <path
+              d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+              style="stroke: none; fill: #ffffff"
+            ></path>
+          </svg>
+        </div>
+      </div>
+
+      <nav class="menu" id="menu">
+        <div class="navegacion">
+          <div class="lista active" id="lista">
+            <a href="../index.html">Inicio</a>
+            <a href="../SobreNosotros/SobreNosotros.html">Sobre nosotros</a>
+            <a href="../Proyectos/Proyectos.html">Proyectos</a>
+            <a href="#">Contactenos</a>
+          </div>
+        </div>
+
+        <div class="menu-movil" id="botonMenu">
+          <div class="linea-1"></div>
+          <div class="linea-2"></div>
+          <div class="linea-3"></div>
+        </div>
+      </nav>
+
+      <div class="textos">
+        <div class="titulo">
+          <h1>ORIGIN HOLDINGS <span>S.A.S</span></h1>
+        </div>
+        <h2 class="cel-inactive">
+          No se puede cargar la pagina en este tamaño de pantalla
+        </h2>
+
+        <div class="subtitulo">
+          <p>La mejor empresa constructora de Colombia</p>
+        </div>
+      </div>
+    </header>
+
+    <h2 class="titulo-form">Formulario De Contacto</h2>
+
+    <main class="main">
+      <form
+        action="https://formsubmit.co/camiloandreshuertas26@gmail.com"
+        method="POST"
+        class="formulario"
+        id="formulario"
+      >
+
+              <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="box" />
+        <input type="hidden" name="_subject" value="Nuevo Correo" />
+        <input type="text" name="_honey" style="display:none">
+        <!-- Grupo Nombre -->
+
+        <div class="grupo-formulario" id="grupo-nombre">
+          <label for="nombre" class="label-formulario">Nombre</label>
+          <div class="formulario-input">
+            <input
+              type="text"
+            id="nombre"
+              name="nombre"
+              placeholder="nombre"
+              class="input-formulario"
+
+            />
+          </div>
+          <p class="input-error">
+            No puede incluir numeros ni caracteres especiales
+          </p>
+        </div>
+
+        <!-- Grupo Email -->
+
+        <div class="grupo-formulario" id="grupo-email">
+          <label for="email" class="label-formulario">Email</label>
+          <div class="formulario-input">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Ingrese su email"
+              class="input-formulario"
+       
+            />
+          </div>
+          <p class="input-error">
+            El correo solo puede contener letras, numeros, puntos, guiones y
+            guion bajo.
+          </p>
+        </div>
+
+        <!-- Asunto -->
+        <div class="grupo-formulario" id="grupo-asunto">
+          <label for="asunto" class="label-formulario">Asunto</label>
+          <div class="formulario-input div-asunto-input" contenteditable="false">
+            <input
+              type="text"
+              name="asunto"
+              id="asunto"
+              placeholder="Asunto"
+              class="input-formulario grupo-asunto-input"
+              contenteditable="false"
+
+            /></input>
+            <ul class="lista-desplegable">
+              <li class="li-desplegable">Informacion General</li>
+              <li class="li-desplegable">Solicitud Cotizacion</li>
+              <li class="li-desplegable">Quejas - Reclamos</li>
+              <li class="li-desplegable">Sugerencias</li>
+            </ul>
+            
+          </div>
+          <p class="input-error">
+            Debes ingresar un asunto
+          </p>
+        </div>
+
+        <!-- Grupo Text Area -->
+
+        <div class="grupo-formulario" id="grupo-textArea">
+          <label for="textarea" class="label-formulario"
+            >Escriba su mensaje</label
+          >
+          <div class="formulario-input formulario-textarea">
+            <textarea class="textarea" name="textarea" id="textarea" ></textarea>
+          </div>
+          <p class="input-textarea-error">
+            No puede enviar un correo sin un mensaje
+          </p>
+        </div>
+
+        <!-- Error al enviar -->
+
+        <div class="formulario-mensaje" id="formulario-mensaje">
+          <p><b>Error:</b> Por favor rellena el formulario correctamente.</p>
+        </div>
+
+        <!-- Boton Envio -->
+        <div class="formulario-grupo formulario-btn-enviar">
+          <input type="submit"  value="Enviar" class="formulario-btn">
+          <p class="formulario-mensaje-exito" id="formulario-mensaje-exito">
+            Formulario enviado exitosamente!
+          </p>
+        </div>
+      </form>
+    </main>
+    <script src="../JS/contacto.js"></script>
+    <script
+      src="https://kit.fontawesome.com/268cdc6bef.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
