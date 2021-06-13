@@ -30,7 +30,23 @@ tituloForm.addEventListener("click", () => {
 const $formulario = document.getElementById("formulario"),
   $inputs = document.querySelectorAll("#formulario input"),
   $textAreaDiv = document.querySelector(".formulario-textarea"),
-  $textArea = document.querySelector(".formulario-textarea .textarea")
+  $textArea = document.querySelector(".formulario-textarea .textarea"),
+  $sendBtn = document.querySelector(".formulario-btn-disabled")
+
+$formulario.addEventListener("keyup", () => {
+  if (
+    $inputs[4].value &&
+    $inputs[5].value &&
+    $inputs[6].value &&
+    $textArea.value
+  ) {
+    $sendBtn.className = "formulario-btn"
+    $sendBtn.removeAttribute("disabled")
+  } else {
+    $sendBtn.className = "formulario-btn-disabled"
+    $sendBtn.setAttribute("disabled", "disabled")
+  }
+})
 
 const expresiones = {
   nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Nombre
@@ -87,8 +103,6 @@ const valdiarCampos = (expresion, input, campo) => {
     campos[campo] = false
   }
 }
-
-$formulario.addEventListener("submit", (e) => {})
 
 $inputs.forEach((input) => {
   input.addEventListener("keyup", valdiarFormulario)
