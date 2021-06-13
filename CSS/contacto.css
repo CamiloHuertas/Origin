@@ -549,6 +549,9 @@ input[type="email"] {
   .subtitulo {
     font-size: 20px;
   }
+  .formulario-btn-disabled {
+    width: 108%;
+  }
   .formulario-btn {
     width: 108%;
   }
