@@ -33,21 +33,6 @@ const $formulario = document.getElementById("formulario"),
   $textArea = document.querySelector(".formulario-textarea .textarea"),
   $sendBtn = document.querySelector(".formulario-btn-disabled")
 
-$formulario.addEventListener("keyup", () => {
-  if (
-    $inputs[4].value &&
-    $inputs[5].value &&
-    $inputs[6].value &&
-    $textArea.value
-  ) {
-    $sendBtn.className = "formulario-btn"
-    $sendBtn.removeAttribute("disabled")
-  } else {
-    $sendBtn.className = "formulario-btn-disabled"
-    $sendBtn.setAttribute("disabled", "disabled")
-  }
-})
-
 const expresiones = {
   nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Nombre
   correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, //Validacion Correo
@@ -160,3 +145,28 @@ const validarMensaje = () => {
 }
 
 $textArea.addEventListener("keyup", validarMensaje)
+
+const error = document.querySelectorAll(".input-error"),
+  errorTextarea = document.querySelector(".input-textarea-error")
+
+console.log(error)
+
+$formulario.addEventListener("keyup", () => {
+  if (
+    !$inputs[4].value ||
+    error[0].className === "input-error input-error-activo" ||
+    !$inputs[5].value ||
+    error[1].className === "input-error input-error-activo" ||
+    !$inputs[6].value ||
+    error[2].className === "input-error input-error-activo" ||
+    !$textArea.value ||
+    errorTextarea.className ===
+      "input-textarea-error input-textarea-error-activo"
+  ) {
+    $sendBtn.className = "formulario-btn-disabled"
+    $sendBtn.setAttribute("disabled", "disabled")
+  } else {
+    $sendBtn.className = "formulario-btn"
+    $sendBtn.removeAttribute("disabled")
+  }
+})
