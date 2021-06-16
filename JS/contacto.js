@@ -170,3 +170,24 @@ $formulario.addEventListener("keyup", () => {
     $sendBtn.removeAttribute("disabled")
   }
 })
+document.addEventListener("submit", (e) => {
+  const successMsg = document.querySelector(".successMsg")
+
+  e.preventDefault()
+  fetch("https://formsubmit.co/ajax/camiloandreshuertas26@gmail.com", {
+    method: "POST",
+    body: new FormData(e.target),
+  })
+    .then((res) => (res.ok ? res.json() : Promise.reject(res)))
+    .then((json) => {
+      console.log(json)
+      successMsg.classList.add("successMsg-enabled")
+      $formulario.reset()
+      setTimeout(() => {
+        location.reload()
+      }, 2000)
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+})

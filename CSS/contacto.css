@@ -323,14 +323,27 @@ input[type="email"] {
 .grupo-asunto-input:focus {
   border: none;
 }
+.success {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 10px 0;
 
-.formulario-mensaje-exito {
-  padding-top: 20px;
-  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.successMsg {
+  font-size: 16px;
   color: #119200;
+  font-weight: 700;
   display: none;
 }
 
+.successMsg-enabled {
+  display: block;
+}
 .lista-desplegable {
   margin-top: 10px;
   list-style: none;
