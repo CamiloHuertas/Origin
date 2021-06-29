@@ -35,7 +35,7 @@ const $formulario = document.getElementById("formulario"),
 
 const expresiones = {
   nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Nombre
-  correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, //Validacion Correo
+  correo: /^[ñÑa-zA-Z0-9_.+-]+@[ñÑa-zA-Z0-9-]+\.[ñÑa-zA-Z0-9-.]+$/, //Validacion Correo
   asunto:
     /^(Informacion General|Solicitud Cotizacion|Quejas - Reclamos|Sugerencias)$/i,
 }
