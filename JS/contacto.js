@@ -34,7 +34,7 @@ const $formulario = document.getElementById("formulario"),
   $sendBtn = document.querySelector(".formulario-btn-disabled")
 
 const expresiones = {
-  nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Nombre
+  nombre: /^[ñÑa-zA-ZÀ-ÿ\s]{1,40}$/, // Nombre
   correo: /^[ñÑa-zA-Z0-9_.+-]+@[ñÑa-zA-Z0-9-]+\.[ñÑa-zA-Z0-9-.]+$/, //Validacion Correo
   asunto:
     /^(Informacion General|Solicitud Cotizacion|Quejas - Reclamos|Sugerencias)$/i,
