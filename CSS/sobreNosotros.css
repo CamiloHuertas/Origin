@@ -5,12 +5,14 @@
 * Browsers: last 4 version
 */
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Big+Shoulders+Stencil+Display:wght@900&family=Montserrat:wght@200;300&family=Mukta:wght@300&family=Rubik:wght@300&display=swap");
 :root {
   --fondo: #f5f6fa;
   --titulo: #c8d6e5;
   --subtitulos: #ecf0f1;
   --bordes: #192a56;
-  --fuente: sans-serif;
+  --fuente: "Montserrat";
   --footer: #2f3640;
 }
 

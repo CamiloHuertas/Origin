@@ -4,13 +4,14 @@
 * Autoprefixer: v9.7.6
 * Browsers: last 4 version
 */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap");
 
 :root {
   --fondo: #f5f6fa;
   --titulo: #c8d6e5;
   --subtitulos: #ecf0f1;
   --bordes: #192a56;
-  --fuente: sans-serif;
+  --fuente: "Montserrat";
   --footer: #2f3640;
 }
 
