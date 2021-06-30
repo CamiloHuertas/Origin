@@ -56,7 +56,7 @@ const valdiarFormulario = (e) => {
       valdiarCampos(expresiones.correo, e.target, "email")
       break
 
-    case "asunto":
+    case "asunt":
       setTimeout(() => {
         valdiarCampos(expresiones.asunto, e.target, "asunto")
       }, 100)
@@ -94,32 +94,57 @@ $inputs.forEach((input) => {
   input.addEventListener("blur", valdiarFormulario)
 })
 
-// Input Desplegable
+// Asunto
 
 const $asunto = document.querySelector(".grupo-asunto-input"),
-  $grupoAsunto = document.getElementById("grupo-asunto")
-$liDesplegables = document.querySelectorAll(
-  ".lista-desplegable .li-desplegable"
-)
+  $asuntoCheckboxes = document.querySelectorAll("#asunto")
 
-$asunto.addEventListener("click", () => {
-  let $listaDesplegable = document
-    .querySelector(".lista-desplegable")
-    .classList.toggle("lista-desplegable-activo")
+$asuntoCheckboxes[0].addEventListener("click", () => {
+  if ($asuntoCheckboxes[0].checked) {
+    $asuntoCheckboxes[1].setAttribute("disabled", "disabled")
+    $asuntoCheckboxes[2].setAttribute("disabled", "disabled")
+    $asuntoCheckboxes[3].setAttribute("disabled", "disabled")
+  } else {
+    $asuntoCheckboxes[1].removeAttribute("disabled")
+    $asuntoCheckboxes[2].removeAttribute("disabled")
+    $asuntoCheckboxes[3].removeAttribute("disabled")
+  }
+})
+$asuntoCheckboxes[1].addEventListener("click", () => {
+  if ($asuntoCheckboxes[1].checked) {
+    $asuntoCheckboxes[0].setAttribute("disabled", "disabled")
+    $asuntoCheckboxes[2].setAttribute("disabled", "disabled")
+    $asuntoCheckboxes[3].setAttribute("disabled", "disabled")
+  } else {
+    $asuntoCheckboxes[0].removeAttribute("disabled")
+    $asuntoCheckboxes[2].removeAttribute("disabled")
+    $asuntoCheckboxes[3].removeAttribute("disabled")
+  }
+})
+$asuntoCheckboxes[2].addEventListener("click", () => {
+  if ($asuntoCheckboxes[2].checked) {
+    $asuntoCheckboxes[0].setAttribute("disabled", "disabled")
+    $asuntoCheckboxes[1].setAttribute("disabled", "disabled")
+    $asuntoCheckboxes[3].setAttribute("disabled", "disabled")
+  } else {
+    $asuntoCheckboxes[0].removeAttribute("disabled")
+    $asuntoCheckboxes[1].removeAttribute("disabled")
+    $asuntoCheckboxes[3].removeAttribute("disabled")
+  }
+})
+$asuntoCheckboxes[3].addEventListener("click", () => {
+  if ($asuntoCheckboxes[3].checked) {
+    $asuntoCheckboxes[0].setAttribute("disabled", "disabled")
+    $asuntoCheckboxes[1].setAttribute("disabled", "disabled")
+    $asuntoCheckboxes[2].setAttribute("disabled", "disabled")
+  } else {
+    $asuntoCheckboxes[0].removeAttribute("disabled")
+    $asuntoCheckboxes[1].removeAttribute("disabled")
+    $asuntoCheckboxes[2].removeAttribute("disabled")
+  }
 })
 
-const seleccionAsunto = (e) => {
-  let texto = e.target.textContent
-  $asunto.value = texto
-
-  let $listaDesplegable = document
-    .querySelector(".lista-desplegable")
-    .classList.remove("lista-desplegable-activo")
-}
-
-$liDesplegables.forEach((li) => {
-  li.addEventListener("click", seleccionAsunto)
-})
+// Validar mensaje
 
 const validarMensaje = () => {
   if ($textArea.value) {
@@ -161,7 +186,57 @@ $formulario.addEventListener("keyup", () => {
     error[2].className === "input-error input-error-activo" ||
     !$textArea.value ||
     errorTextarea.className ===
-      "input-textarea-error input-textarea-error-activo"
+      "input-textarea-error input-textarea-error-activo" ||
+    (!$asuntoCheckboxes[0].checked &&
+      !$asuntoCheckboxes[1].checked &&
+      !$asuntoCheckboxes[2].checked &&
+      !$asuntoCheckboxes[3].checked)
+  ) {
+    $sendBtn.className = "formulario-btn-disabled"
+    $sendBtn.setAttribute("disabled", "disabled")
+  } else {
+    $sendBtn.className = "formulario-btn"
+    $sendBtn.removeAttribute("disabled")
+  }
+})
+$formulario.addEventListener("blur", () => {
+  if (
+    !$inputs[4].value ||
+    error[0].className === "input-error input-error-activo" ||
+    !$inputs[5].value ||
+    error[1].className === "input-error input-error-activo" ||
+    !$inputs[6].value ||
+    error[2].className === "input-error input-error-activo" ||
+    !$textArea.value ||
+    errorTextarea.className ===
+      "input-textarea-error input-textarea-error-activo" ||
+    (!$asuntoCheckboxes[0].checked &&
+      !$asuntoCheckboxes[1].checked &&
+      !$asuntoCheckboxes[2].checked &&
+      !$asuntoCheckboxes[3].checked)
+  ) {
+    $sendBtn.className = "formulario-btn-disabled"
+    $sendBtn.setAttribute("disabled", "disabled")
+  } else {
+    $sendBtn.className = "formulario-btn"
+    $sendBtn.removeAttribute("disabled")
+  }
+})
+$formulario.addEventListener("click", () => {
+  if (
+    !$inputs[4].value ||
+    error[0].className === "input-error input-error-activo" ||
+    !$inputs[5].value ||
+    error[1].className === "input-error input-error-activo" ||
+    !$inputs[6].value ||
+    error[2].className === "input-error input-error-activo" ||
+    !$textArea.value ||
+    errorTextarea.className ===
+      "input-textarea-error input-textarea-error-activo" ||
+    (!$asuntoCheckboxes[0].checked &&
+      !$asuntoCheckboxes[1].checked &&
+      !$asuntoCheckboxes[2].checked &&
+      !$asuntoCheckboxes[3].checked)
   ) {
     $sendBtn.className = "formulario-btn-disabled"
     $sendBtn.setAttribute("disabled", "disabled")

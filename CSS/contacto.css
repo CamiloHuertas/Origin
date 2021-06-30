@@ -317,6 +317,19 @@ input[type="email"] {
   box-shadow: 3px 0 30px rgba(163, 163, 163, 1);
 }
 
+.div-asunto-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 0;
+}
+
+.div-asunto-input input {
+  width: 20px;
+  height: 20px;
+  font-size: 1px;
+}
+
 .grupo-asunto-input {
   cursor: pointer;
 }
@@ -568,6 +581,10 @@ input[type="email"] {
   }
   .formulario-btn {
     width: 108%;
+  }
+
+  .div-asunto-input {
+    flex-direction: column;
   }
 }
 
